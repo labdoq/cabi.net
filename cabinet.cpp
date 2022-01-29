@@ -4,7 +4,7 @@
  
 using namespace std;
 
-int CURRENT_USER_ID = 0;
+int CURRENT_USER_ID = 367;
 int COUNT;
 
 string users[5][2];
@@ -82,7 +82,7 @@ void Authorization() {
 
     password = "";
    
-    CURRENT_USER_ID = i;
+    CURRENT_USER_ID = user_id;
 }
 
 void info() {
@@ -93,8 +93,11 @@ void info() {
 		system("cls");
 
     	cout << "_______Current user_______" << endl;
-    	cout << users[CURRENT_USER_ID][0] << endl;
-    	cout << "Press ESC to exit";
+    	if(CURRENT_USER_ID != 367)
+    	{
+			cout << users[CURRENT_USER_ID][0] << endl;
+		}
+    	cout << "Press ESC to exit.";
     	
     	check = getch();
 	}
